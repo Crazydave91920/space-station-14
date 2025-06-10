@@ -53,6 +53,38 @@
     price: 5
 
 - type: entity
+  name: Ventilator
+  description: Used to treat patients who are unable to breath on their own.
+  parent: BaseHealingItem
+  id: Ventilator
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - Ventilator
+  - type: Sprite
+    state: ointment
+  - type: Item
+    heldPrefix: ointment
+  - type: Healing
+    consumeOnUse: false
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Asphyxiation: -5
+    healingBeginSound:
+      path: "/Audio/Effects/internals.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Effects/internals.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+
+- type: entity
   id: Ointment1
   parent: Ointment
   suffix: Single

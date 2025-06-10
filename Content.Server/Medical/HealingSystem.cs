@@ -98,7 +98,7 @@ public sealed class HealingSystem : EntitySystem
             if (_stacks.GetCount(args.Used.Value, stackComp) <= 0)
                 dontRepeat = true;
         }
-        else
+        else if (healing.ConsumeOnUse == true)
         {
             QueueDel(args.Used.Value);
         }

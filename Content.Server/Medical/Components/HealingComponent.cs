@@ -62,5 +62,8 @@ namespace Content.Server.Medical.Components
         /// </summary>
         [DataField("healingEndSound")]
         public SoundSpecifier? HealingEndSound = null;
+
+        [DataField]
+        public bool ConsumeOnUse = true;
     }
 }
